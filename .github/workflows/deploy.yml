@@ -20,7 +20,7 @@ jobs:
         port: 22
         script: |
           # ls
-          sudo su - patil
+          sudo su  patil
           cd /home/patil/evole-web
           git config --global --add safe.directory /home/patil/evole-web
           git pull origin main 
