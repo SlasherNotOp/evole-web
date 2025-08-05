@@ -1,103 +1,87 @@
-import Image from "next/image";
+// File: app/page.tsx (or pages/index.tsx depending on your Next.js version)
 
-export default function Home() {
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-black text-white font-sans">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center h-screen text-center relative overflow-hidden">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+          WE BUILD <br /> DIGITAL <span className="text-purple-500">GROWTH.</span>
+        </h1>
+        <p className="mt-4 max-w-xl text-gray-300">
+          Helping brands accelerate their digital journey with creative strategy, design & marketing.
+        </p>
+        <div className="mt-6 flex gap-4">
+          <Button className="bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-full">Let’s Talk</Button>
+          <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-full">Our Services</Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        {/* Floating spheres (placeholders) */}
+        <div className="absolute top-10 right-10 w-20 h-20 bg-purple-500 rounded-full blur-2xl opacity-30 animate-pulse" />
+        <div className="absolute bottom-10 left-10 w-32 h-32 bg-yellow-400 rounded-full blur-2xl opacity-20 animate-bounce" />
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-6 bg-black text-white">
+        <h2 className="text-3xl font-semibold text-center mb-12">Our Services</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {['Performance Marketing', 'Paid Ads (Meta/Google)', 'Social Media Management', 'SEO & Content Strategy'].map((service, index) => (
+            <div
+              key={index}
+              className="bg-zinc-900 p-6 rounded-xl border border-zinc-700 hover:border-purple-500 transition duration-300"
+            >
+              <p className="text-lg font-medium text-center text-yellow-300">{service}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-20 px-6 bg-black">
+        <h2 className="text-3xl font-semibold text-center mb-12 text-white">Case Studies</h2>
+        <div className="grid sm:grid-cols-2 gap-6">
+          <div className="bg-zinc-900 p-6 rounded-xl text-white">
+            <h3 className="text-2xl font-bold">+480% ROI</h3>
+            <p className="text-sm text-gray-400 mt-2">Performance-driven growth campaign</p>
+          </div>
+          <div className="bg-zinc-900 p-6 rounded-xl text-white">
+            <h3 className="text-2xl font-bold">5M Reach in 3 months</h3>
+            <p className="text-sm text-gray-400 mt-2">High-impact social strategy</p>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 px-6 bg-black text-white">
+        <h2 className="text-3xl font-semibold text-center mb-6">About Us</h2>
+        <p className="text-center max-w-2xl mx-auto text-gray-400">
+          We are a team of marketers, designers, and strategists committed to driving digital success and delivering measurable results.
+        </p>
+        <div className="mt-8 flex justify-center gap-4">
+          {[1, 2, 3].map((_, i) => (
+            <div key={i} className="w-24 h-24 rounded-full bg-zinc-800 border border-zinc-700" />
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-6 bg-black text-white">
+        <h2 className="text-3xl font-semibold text-center mb-6">Contact Us</h2>
+        <form className="max-w-xl mx-auto grid gap-4">
+          <input type="text" placeholder="Name" className="p-3 rounded bg-zinc-800 border border-zinc-700 text-white" />
+          <input type="email" placeholder="Email" className="p-3 rounded bg-zinc-800 border border-zinc-700 text-white" />
+          <input type="text" placeholder="Budget" className="p-3 rounded bg-zinc-800 border border-zinc-700 text-white" />
+          <textarea placeholder="Message" className="p-3 rounded bg-zinc-800 border border-zinc-700 text-white h-32" />
+          <Button className="bg-yellow-400 text-black hover:bg-yellow-500 py-3 rounded">Start Project</Button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-10 px-6 bg-black text-center text-gray-600 text-sm">
+        © 2025 YourAgencyName. All rights reserved.
       </footer>
-    </div>
+    </main>
   );
 }
