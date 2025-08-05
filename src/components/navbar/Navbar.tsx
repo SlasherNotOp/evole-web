@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,9 +15,11 @@ const Navbar = () => {
       <div className=" flex items-center justify-around px-6 h-[70px] ">
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl font-bold text-white tracking-tight">
-          <img
+          <Image
             src="/assets/1.svg/"
             alt="EvolTech Logo"
+            width={100}
+            height={100}
             className="w-[150px] object-contain"
           />
         </div>
@@ -32,7 +35,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
           <button className="button-primary text-sm shadow-lg">
-            Let's Talk
+            Let`&apos;`s Talk
           </button>
         </div>
 
@@ -54,7 +57,7 @@ const Navbar = () => {
             <li className="hover:text-white cursor-pointer">Contact</li>
             <li>
               <button className="button-primary w-full text-sm">
-                Let's Talk
+                Let`&apos;`s Talk
               </button>
             </li>
           </ul>

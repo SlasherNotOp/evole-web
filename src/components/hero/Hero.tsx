@@ -24,7 +24,7 @@ const Hero = () => {
         </p>
         <div className="flex items-center gap-5">
              <button className="button-secondary text-sm shadow-lg">
-            Let's Talk
+            Let `&apos;`s Talk
           </button>
           <button className="button-secondary text-sm shadow-lg">our service</button>
         </div>
