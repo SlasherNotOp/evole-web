@@ -20,9 +20,7 @@ jobs:
         port: 22
         script: |
           # ls
-          cd .. 
-          cd patil
-          cd evole-web
+          cd /home/patil/evole-web
           sudo git pull
           
           # export NVM_DIR="/home/slasher/.nvm"
