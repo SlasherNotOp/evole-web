@@ -19,9 +19,12 @@ jobs:
         passphrase: ${{ secrets.SERVER_SSH_PASSPHRASE }}
         port: 22
         script: |
+          # ls
+          cd.. 
+          cd patil
           ls
-          export NVM_DIR="/home/slasher/.nvm"
-          source "$NVM_DIR/nvm.sh"
+          # export NVM_DIR="/home/slasher/.nvm"
+          # source "$NVM_DIR/nvm.sh"
           # cd flower-nest
           # git pull origin main
           # npx prisma generate
