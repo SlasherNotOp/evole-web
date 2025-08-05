@@ -22,7 +22,9 @@ jobs:
           # ls
           cd .. 
           cd patil
-          ls
+          cd evole-web
+          sudo git pull
+          
           # export NVM_DIR="/home/slasher/.nvm"
           # source "$NVM_DIR/nvm.sh"
           # cd flower-nest
