@@ -20,12 +20,13 @@ jobs:
         port: 22
         script: |
           # ls
+          sudo su - patil
           cd /home/patil/evole-web
           git config --global --add safe.directory /home/patil/evole-web
           git pull origin main 
           npm run build
           pm2 restart 0
-          
+
           
           # export NVM_DIR="/home/slasher/.nvm"
           # source "$NVM_DIR/nvm.sh"
