@@ -10,12 +10,12 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    // fixed top-0  z-50
-    <nav className="w-full  backdrop-blur-md border-b border-white/10">
+    // 
+    <nav className="w-full fixed top-0  z-50 backdrop-blur-md border-b border-white/10">
       <div className=" flex items-center justify-around px-6 h-[70px] ">
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl font-bold text-white tracking-tight">
-          <Image
+          <img
             src="/assets/1.svg/"
             alt="EvolTech Logo"
             width={100}
@@ -35,7 +35,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
           <button className="button-primary text-sm shadow-lg">
-            Let`&apos;`s Talk
+            Let's Talk
           </button>
         </div>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
             <li className="hover:text-white cursor-pointer">Contact</li>
             <li>
               <button className="button-primary w-full text-sm">
-                Let`&apos;`s Talk
+                Let's Talk
               </button>
             </li>
           </ul>
