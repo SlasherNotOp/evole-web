@@ -11,9 +11,11 @@ export default function HomePage() {
   return (
     <div>
       <Hero/>
-      <OurServices/>
-      {/* <WhyChoose/> */}
-      <WhyChoose2/>
+      <div className='container mx-auto'>
+        <OurServices/>
+        {/* <WhyChoose/> */}
+        <WhyChoose2/>
+      </div>
 
     </div>
   );
