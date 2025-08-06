@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
@@ -6,9 +7,21 @@ const ServicesSection = () => {
       id: 1,
       title: "Performance Marketing",
       icon: (
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <defs>
-            <linearGradient id="rocket-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="rocket-gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#8B5CF6" />
               <stop offset="50%" stopColor="#A855F7" />
               <stop offset="100%" stopColor="#F59E0B" />
@@ -28,40 +41,85 @@ const ServicesSection = () => {
         </svg>
       ),
     },
-    {
-      id: 2,
-      title: "Paid Ads",
-      subtitle: "(Meta/Google)",
-      icon: (
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="target-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#8B5CF6" />
-              <stop offset="50%" stopColor="#A855F7" />
-              <stop offset="100%" stopColor="#F59E0B" />
-            </linearGradient>
-          </defs>
-          <circle cx="32" cy="32" r="28" stroke="url(#target-gradient)" strokeWidth="3" fill="none" />
-          <circle cx="32" cy="32" r="20" stroke="url(#target-gradient)" strokeWidth="2" fill="none" />
-          <circle cx="32" cy="32" r="12" stroke="url(#target-gradient)" strokeWidth="2" fill="none" />
-          <circle cx="32" cy="32" r="4" fill="url(#target-gradient)" />
-          <path
-            d="M20 20L44 44M44 20L20 44"
-            stroke="url(#target-gradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            opacity="0.6"
-          />
-        </svg>
-      ),
-    },
+    // {
+    //   id: 2,
+    //   title: "Paid Ads",
+    //   subtitle: "(Meta/Google)",
+    //   icon: (
+    //     <svg
+    //       width="64"
+    //       height="64"
+    //       viewBox="0 0 64 64"
+    //       fill="none"
+    //       xmlns="http://www.w3.org/2000/svg"
+    //     >
+    //       <defs>
+    //         <linearGradient
+    //           id="target-gradient"
+    //           x1="0%"
+    //           y1="0%"
+    //           x2="100%"
+    //           y2="100%"
+    //         >
+    //           <stop offset="0%" stopColor="#8B5CF6" />
+    //           <stop offset="50%" stopColor="#A855F7" />
+    //           <stop offset="100%" stopColor="#F59E0B" />
+    //         </linearGradient>
+    //       </defs>
+    //       <circle
+    //         cx="32"
+    //         cy="32"
+    //         r="28"
+    //         stroke="url(#target-gradient)"
+    //         strokeWidth="3"
+    //         fill="none"
+    //       />
+    //       <circle
+    //         cx="32"
+    //         cy="32"
+    //         r="20"
+    //         stroke="url(#target-gradient)"
+    //         strokeWidth="2"
+    //         fill="none"
+    //       />
+    //       <circle
+    //         cx="32"
+    //         cy="32"
+    //         r="12"
+    //         stroke="url(#target-gradient)"
+    //         strokeWidth="2"
+    //         fill="none"
+    //       />
+    //       <circle cx="32" cy="32" r="4" fill="url(#target-gradient)" />
+    //       <path
+    //         d="M20 20L44 44M44 20L20 44"
+    //         stroke="url(#target-gradient)"
+    //         strokeWidth="2"
+    //         strokeLinecap="round"
+    //         opacity="0.6"
+    //       />
+    //     </svg>
+    //   ),
+    // },
     {
       id: 3,
       title: "Social Media Management",
       icon: (
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <defs>
-            <linearGradient id="social-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="social-gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#8B5CF6" />
               <stop offset="50%" stopColor="#A855F7" />
               <stop offset="100%" stopColor="#F59E0B" />
@@ -127,66 +185,137 @@ const ServicesSection = () => {
       id: 4,
       title: "SEO & Content Strategy",
       icon: (
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <defs>
-            <linearGradient id="seo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="seo-gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#8B5CF6" />
               <stop offset="50%" stopColor="#A855F7" />
               <stop offset="100%" stopColor="#F59E0B" />
             </linearGradient>
           </defs>
-          <circle cx="28" cy="28" r="16" stroke="url(#seo-gradient)" strokeWidth="3" fill="none" />
+          <circle
+            cx="28"
+            cy="28"
+            r="16"
+            stroke="url(#seo-gradient)"
+            strokeWidth="3"
+            fill="none"
+          />
           <path
             d="M40 40L52 52"
             stroke="url(#seo-gradient)"
             strokeWidth="4"
             strokeLinecap="round"
           />
-          <circle cx="28" cy="28" r="8" fill="url(#seo-gradient)" opacity="0.3" />
+          <circle
+            cx="28"
+            cy="28"
+            r="8"
+            fill="url(#seo-gradient)"
+            opacity="0.3"
+          />
           <path
             d="M24 24L32 32M32 24L24 32"
             stroke="#FFF"
             strokeWidth="2"
             strokeLinecap="round"
           />
-          <circle cx="48" cy="16" r="3" fill="url(#seo-gradient)" opacity="0.7" />
+          <circle
+            cx="48"
+            cy="16"
+            r="3"
+            fill="url(#seo-gradient)"
+            opacity="0.7"
+          />
         </svg>
       ),
     },
   ];
 
   return (
-    <div className="bg-black min-h-screen py-16 px-4">
-      <div className="container mx-auto">
-        <h2 className="text-white text-4xl md:text-5xl font-bold mb-16 text-left">
-          Our Services
+    <div className="container">
+      <div className="">
+        <h2 className=" text-4xl md:text-5xl ">
+          Our <span className="text-gradient">Services</span>
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="bg-gray-900/50 max-w-[15rem] backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105 hover:border-purple-500/30 group"
-            >
-              <div className="flex flex-col items-center text-center ">
-                <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                
-                <h3 className="text-white text-xl font-semibold mb-2 leading-tight">
-                  {service.title}
-                </h3>
-                
-                {service.subtitle && (
-                  <p className="text-gray-400 text-sm font-medium">
-                    {service.subtitle}
-                  </p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
+
+
+
+    {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className="card bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center transition hover:shadow-xl"
+          >
+            <div className="mb-4">{service.icon}</div>
+            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+            <p className="text-gray-600 text-sm">{service.description}</p>
+          </div>
+        ))}
+      </div>   */}
+
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
+  {services.map((service)=>(
+   <div key={service.id} className="card">
+        <div className="flex  items-center gap-1.5">
+           <div className="mb-4 ">{service.icon}</div>
+              <h4 className="text-[16px] font-semibold mb-2">{service.title}</h4>
+        </div>
+        <div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorem ea aperiam exercitationem accusantium possimus, laudantium sed veritatis ducimus autem? Ea explicabo odio dignissimos temporibus quis unde corporis accusantium id.</p>
+        </div>
+        <div>
+     <a
+        href="#"
+        className="text-primary font-medium text-sm flex items-center gap-1 hover:underline"
+      >
+        Learn More <ArrowRight size={16} />
+      </a>
+  </div>
+      </div>
+  ))}
+     
+
+
+</div>
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 min-h-[260px] w-full max-w-xs mx-auto shadow-lg hover:shadow-purple-400/10 transition-all duration-300 hover:scale-[1.03] group"
+          >
+            <div className="flex flex-col items-center justify-center text-center space-y-4">
+              <div className="text-purple-400 text-4xl group-hover:scale-110 transition-transform duration-300">
+                {service.icon}
+              </div>
+
+              <h3 className="text-white text-lg font-semibold leading-tight">
+                {service.title}
+              </h3>
+
+              {service.subtitle && (
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {service.subtitle}
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div> */}
+      
     </div>
   );
 };
