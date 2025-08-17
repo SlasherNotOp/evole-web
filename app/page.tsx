@@ -5,6 +5,8 @@ import { navItems } from "@/data";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { motion } from "framer-motion";
 import Hero from "@/components/Hero";
+import Patners from "@/components/Patners";
+import Team from "@/components/Team";
 
 // Lazy load sections (code-splitting)
 // const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
@@ -66,6 +68,14 @@ const Home = () => {
 
         <SectionWrapper>
           <Clients />
+        </SectionWrapper>
+        
+        <SectionWrapper>
+          <Team />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <Patners />
         </SectionWrapper>
 
         <SectionWrapper>
