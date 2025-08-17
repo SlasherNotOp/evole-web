@@ -1,31 +1,76 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { navItems } from "@/data";
-
-import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
-import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
-import Approach from "@/components/Approach";
-import Experience from "@/components/Experience";
-import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Pricing from "@/components/Pricing";
+import { motion } from "framer-motion";
+import Hero from "@/components/Hero";
+
+// Lazy load sections (code-splitting)
+// const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
+const Grid = dynamic(() => import("@/components/Grid"), { ssr: false });
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
+const Clients = dynamic(() => import("@/components/Clients"), { ssr: false });
+const Approach = dynamic(() => import("@/components/Approach"), { ssr: false });
+const Experience = dynamic(() => import("@/components/Experience"), {
+  ssr: false,
+});
+const RecentProjects = dynamic(() => import("@/components/RecentProjects"), {
+  ssr: false,
+});
+const Pricing = dynamic(() => import("@/components/Pricing"), { ssr: false });
+
+interface SectionWrapperProps {
+  children: any;
+}
+// Reusable animation wrapper
+const SectionWrapper = ({ children }: SectionWrapperProps) => (
+  <motion.section
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.3 }}
+    className="w-full"
+  >
+    {children}
+  </motion.section>
+);
 
 const Home = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
-        <Hero />
-        <Grid />
-        <Experience />
-        <Pricing/>
-        <Approach />
-        <RecentProjects />
-        <Clients />
 
-        <Footer />
+        <Hero />
+
+        <SectionWrapper>
+          <Grid />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <Experience />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <Pricing />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <Approach />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <RecentProjects />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <Clients />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <Footer />
+        </SectionWrapper>
       </div>
     </main>
   );
