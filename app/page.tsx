@@ -10,7 +10,9 @@ import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Pricing from "@/components/Pricing";
+
+import WhyChoose from "@/components/WhyChoose";
+import { LeadMagnet } from "@/components/LeadMagnet";
 
 const Home = () => {
   return (
@@ -18,12 +20,14 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
+        {/* <Grid /> */}
         <Experience />
-        <Pricing/>
-        <Approach />
-        <RecentProjects />
+        <WhyChoose/>
+        {/* <Approach /> */}
+        {/* <RecentProjects /> */}
+        {/* <ClientLogo/> */}
         <Clients />
+        <LeadMagnet/>
 
         <Footer />
       </div>

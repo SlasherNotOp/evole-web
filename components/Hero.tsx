@@ -47,18 +47,18 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-7xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl">
-            Full-service marketing agency helping you grow.
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl font-poppins">
+            Full-service digital marketing agency, helping yours business grow online
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 font-poppins font-semibold">
             <MagicButton
-              title="CTA 1"
+              title="Book Free Strategy Call"
               icon={<FaLocationArrow />}
               position="right"
             />
             <MagicButton
-              title="CTA2"
+              title="See Our Work"
               icon={<FaLocationArrow />}
               position="right"
             />

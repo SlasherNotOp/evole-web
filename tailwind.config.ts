@@ -26,6 +26,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: 'var(--font-poppins)',
+      },
       colors: {
         black: {
           DEFAULT: "#000",

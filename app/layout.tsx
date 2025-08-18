@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { Montserrat, Poppins, } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import Chatbot from "@/components/Chatbot";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "800", // Extra Bold
+  variable: "--font-montserrat",
+});
+
+// Load Poppins with Regular weight (400)
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "400", // Regular
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Evolve Media",
@@ -22,7 +34,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.png" sizes="any" />
       </head>
-      <body className={inter.className}>
+      <body className={`${montserrat.className} ${poppins.variable}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
