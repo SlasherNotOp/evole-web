@@ -27,13 +27,13 @@ const Patners = () => {
             </div>
           ))}
         </div>
-        <p>
+        <p className="text-gray-600 text-sm sm:text-base md:text-lg mt-6 max-w-4xl mx-auto">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum minus
           et, labore aut eum sapiente necessitatibus ipsa laboriosam reiciendis,
           culpa optio odit nisi illo laborum eos temporibus quisquam perferendis
           iste!
         </p>
-        
+
         <MagicButton
           title=" See our case studies"
           icon={<FaLocationArrow />}
