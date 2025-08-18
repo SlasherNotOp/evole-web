@@ -3,7 +3,6 @@
 import React from "react";
 import { FaLocationArrow, FaCheck } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
-import { Button } from "./ui/MovingBorders";
 
 const pricingPlans = [
   {
@@ -41,16 +40,17 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <div className="py-20 w-full">
-      <div>
-        <h1 className="heading">
-          Flexible <span className="text-purple"> Pricing</span>
+    <div className="py-16 w-full">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <h1 className="heading text-center text-3xl sm:text-4xl font-bold">
+          Flexible <span className="text-purple">Pricing</span>
         </h1>
-        <p className="text-center text-gray-400 mt-3">
+        <p className="text-center text-gray-400 mt-3 text-sm sm:text-base">
           Choose what fits your growth stage.
         </p>
 
-        <div className="w-full mt-12 grid grid-cols-3 gap-10">
+        {/* ✅ Responsive Grid */}
+        <div className="w-full mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {pricingPlans.map((plan) => (
             <div
               key={plan.id}
@@ -62,12 +62,12 @@ const Pricing = () => {
               }}
               className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
             >
-              <div className="flex flex-col justify-between p-6 md:p-8 lg:p-10 gap-4">
+              <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-10 gap-4 h-full">
                 <div>
-                  <h1 className="text-start text-2xl font-bold">
+                  <h1 className="text-start sm:text-center lg:text-start text-xl sm:text-2xl font-bold">
                     {plan.title}
                   </h1>
-                  <p className="text-start text-yellow-400 text-xl mt-2 font-semibold">
+                  <p className="text-start sm:text-center lg:text-start text-yellow-400 text-lg sm:text-xl mt-2 font-semibold">
                     {plan.price}
                   </p>
                 </div>
@@ -75,14 +75,14 @@ const Pricing = () => {
                   {plan.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-center gap-2 text-gray-300"
+                      className="flex items-center gap-2 text-gray-300 text-sm sm:text-base"
                     >
                       <FaCheck className="text-green-400" /> {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-6 text-center">
-                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 rounded-md font-semibold">
+                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-5 py-2 rounded-md font-semibold w-full sm:w-auto">
                     Get Started
                   </button>
                 </div>
@@ -91,6 +91,7 @@ const Pricing = () => {
           ))}
         </div>
 
+        {/* ✅ CTA button */}
         <div className="text-center mt-10">
           <MagicButton
             title="Let's Build Your Brand"
