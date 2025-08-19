@@ -11,6 +11,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
 
 export const BentoGrid = ({
   className,
@@ -41,6 +42,8 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  contentList,
+  shortDiscription,
 }: {
   className?: string;
   id: number;
@@ -50,6 +53,8 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  shortDiscription?: string;
+  contentList?: string[];
 }) => {
   const leftLists = ["Marketing", "Content Creation", "Marketing"];
   const rightLists = ["Websites", "App", "Banking"];
@@ -129,10 +134,24 @@ export const BentoGridItem = ({
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`flex flex-col gap-4 text-lg lg:text-3xl min-w-96  z-10 font-poppins`}
           >
-            {title}
+            <h3 className="text-5xl font-bold">{title}</h3>
+            <p className="text-2xl">{shortDiscription}</p>
+            <ul className="flex flex-col gap-4">
+              {
+                contentList?.map((list: string) => {
+                  return (
+                    <div className="flex gap-4">
+                      <span>→</span>
+                      <li className="text-3xl">{list}</li>
+                    </div>
+                  )
+                })
+              }
+            </ul>
           </div>
+
 
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}

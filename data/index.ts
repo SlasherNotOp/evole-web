@@ -10,10 +10,12 @@ export const gridItems = [
     id: 1,
     title: "Proven Performance. Measurable Growth. ",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-5 lg:min-h-[60vh]",
+    imgClassName: "w-full h-full opacity-20",
+    titleClassName: "justify-start",
+    contentList:['4x Reach in 30 Days','135+ Leads Generated in a Month'],
+    shortDiscription:'From reels that go viral to ad campaigns that convert, our work delivers results.',//laterAdded
+    img: "/growth_bar.png",
     spareImg: "",
   },
   {

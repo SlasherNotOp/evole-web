@@ -4,9 +4,12 @@ import { FaLocationArrow } from 'react-icons/fa6'
 
 export const LeadMagnet = () => {
   return (
-    <div className="flex flex-col items-center pt-[8rem] ">
+    <div className="flex flex-col items-center pt-[8rem]
+     bg-gradient-to-t rounded-lg from-[#5d16ea]  to-gray-950
+     pb-8
+     ">
       <h1 className="sub-heading lg:max-w-[55vw]">
-        Let’s Grow Your <span className="text-purple">Business<br /></span>
+        Let’s Grow Your <span className="">Business<br /></span>
 
       </h1>
       <h2 className='sub-heading lg:max-w-[55vw] pt-4'>
@@ -17,7 +20,8 @@ export const LeadMagnet = () => {
       </p>
       <a href="mailto:patilharshal2122@gmail.com">
         <MagicButton
-          title="Book"
+          otherClasses='text-[#5d16ea] bg-white text-[1.3rem]'
+          title="Book Now"
           icon={<FaLocationArrow />}
           position="right"
         />

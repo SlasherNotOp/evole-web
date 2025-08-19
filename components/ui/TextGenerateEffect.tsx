@@ -6,9 +6,11 @@ import { cn } from "@/lib/utils";
 export const TextGenerateEffect = ({
   words,
   className,
+  flag = true
 }: {
   words: string;
   className?: string;
+  flag?: boolean
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
@@ -26,7 +28,7 @@ export const TextGenerateEffect = ({
     );
   }, [scope.current]);
 
-  const renderWords = () => {
+  const renderWords = (flag: boolean) => {
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => {
@@ -34,7 +36,7 @@ export const TextGenerateEffect = ({
             <motion.span
               key={word + idx}
               // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 1 ? "text-purple" : "dark:text-white text-black"
+              className={` ${idx > 1 && flag ? "text-purple" : "dark:text-white text-black"
                 } opacity-0`}
             >
               {word}{" "}
@@ -51,7 +53,7 @@ export const TextGenerateEffect = ({
       <div className="my-4">
         {/* remove  text-2xl from the original */}
         <div className=" dark:text-white text-black leading-snug tracking-wide">
-          {renderWords()}
+          {renderWords(flag)}
         </div>
       </div>
     </div>

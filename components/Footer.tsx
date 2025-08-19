@@ -4,7 +4,7 @@ import MagicButton from "./MagicButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white pt-20 pb-10 relative" id="contact">
+    <footer className="w-full bg-black text-white pt-20 pb-10 relative font-poppins" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96 -z-10">
         <img
@@ -30,7 +30,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-4 ">Quick Links</h3>
           <ul className="space-y-2 text-white-300">
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>

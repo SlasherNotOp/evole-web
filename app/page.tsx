@@ -52,9 +52,9 @@ const Home = () => {
 
         <Hero />
 
-        {/* <SectionWrapper>
+        <SectionWrapper>
           <Grid />
-        </SectionWrapper> */}
+        </SectionWrapper>
 
         <SectionWrapper>
           <Experience />
