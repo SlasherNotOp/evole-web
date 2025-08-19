@@ -77,10 +77,9 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-7xl"
           />
 
-          <TextGenerateEffect
-            words={`Full-service marketing agency helping you grow.`}
-            className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl"
-          />
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl font-poppins">
+            Full-service digital marketing agency, helping yours business grow online
+          </p>
 
           <motion.div
             className="flex gap-5"
@@ -102,7 +101,7 @@ const Hero = () => {
               }}
             >
               <MagicButton
-                title="CTA 1"
+                title="Book Free Strategy Call"
                 icon={<FaLocationArrow />}
                 position="right"
               />
@@ -114,7 +113,7 @@ const Hero = () => {
               }}
             >
               <MagicButton
-                title="CTA 2"
+                title="See Our Work"
                 icon={<FaLocationArrow />}
                 position="right"
               />

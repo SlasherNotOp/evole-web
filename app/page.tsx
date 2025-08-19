@@ -27,15 +27,18 @@ const Pricing = dynamic(() => import("@/components/Pricing"), { ssr: false });
 
 interface SectionWrapperProps {
   children: any;
+  className?: string;
+  id?: string;
 }
 // Reusable animation wrapper
-const SectionWrapper = ({ children }: SectionWrapperProps) => (
+const SectionWrapper = ({ children, className, id }: SectionWrapperProps) => (
   <motion.section
     initial={{ opacity: 0, y: 60 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
     viewport={{ once: true, amount: 0.3 }}
-    className="w-full"
+    className={`w-full ${className}`}
+    id={id}
   >
     {children}
   </motion.section>
@@ -49,39 +52,43 @@ const Home = () => {
 
         <Hero />
 
-        <SectionWrapper>
+        {/* <SectionWrapper>
           <Grid />
-        </SectionWrapper>
+        </SectionWrapper> */}
 
         <SectionWrapper>
           <Experience />
         </SectionWrapper>
 
-        <SectionWrapper>
+        {/* <SectionWrapper>
           <Pricing />
-        </SectionWrapper>
+        </SectionWrapper> */}
 
         <SectionWrapper>
           <Approach />
         </SectionWrapper>
 
-        <SectionWrapper>
+        {/* <SectionWrapper>
           <RecentProjects />
-        </SectionWrapper>
+        </SectionWrapper> */}
 
         <SectionWrapper>
           <Clients />
         </SectionWrapper>
-        
-        <SectionWrapper>
+
+        {/* <SectionWrapper>
           <Team />
-        </SectionWrapper>
+        </SectionWrapper> */}
 
-        <SectionWrapper>
+        {/* <SectionWrapper>
           <Patners />
+        </SectionWrapper> */}
+
+        <SectionWrapper className="min-h-[80vh]" id="lead-magnet">
+          <LeadMagnet />
         </SectionWrapper>
 
-        <SectionWrapper>
+        <SectionWrapper >
           <Footer />
         </SectionWrapper>
       </div>
