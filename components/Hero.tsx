@@ -33,7 +33,18 @@ const FloatingFragment = ({
   );
 };
 
-const Hero = () => {
+const Hero = (
+  { headline = 'HELPING BRANDS GROW DIGITALLY.',
+    subText = 'Full-service digital marketing agency, helping yours business grow online',
+    cta1 = 'Book Free Strategy Call',
+    cta2
+  }: {
+    headline?: string,
+    subText?: string,
+    cta1?: string,
+    cta2?: string
+  }
+) => {
   return (
     <div className="pb-20 pt-36 relative ">
       {/* Spotlights */}
@@ -78,12 +89,12 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center gap-3">
           <TextGenerateEffect
             flag={false}
-            words={`HELPING BRANDS GROW DIGITALLY.`}
+            words={headline}
             className="text-center text-[40px] md:text-5xl lg:text-7xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl font-poppins">
-            Full-service digital marketing agency, helping yours business grow online
+            {subText}
           </p>
 
           <motion.div
@@ -105,11 +116,15 @@ const Hero = () => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <MagicButton
-                title="Book Free Strategy Call"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
+              {
+                cta1 && (
+                  <MagicButton
+                    title={cta1}
+                    icon={<FaLocationArrow />}
+                    position="right"
+                  />
+                )
+              }
             </motion.div>
             <motion.div
               variants={{
@@ -117,11 +132,15 @@ const Hero = () => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <MagicButton
-                title="See Our Work"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
+              {
+                cta2 && (
+                  <MagicButton
+                    title={cta2}
+                    icon={<FaLocationArrow />}
+                    position="right"
+                  />
+                )
+              }
             </motion.div>
           </motion.div>
         </div>

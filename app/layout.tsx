@@ -5,6 +5,9 @@ import { Montserrat, Poppins, } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import Chatbot from "@/components/Chatbot";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { navItems } from "@/data";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -41,8 +44,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <FloatingNav navItems={navItems} />
           {children}
-          <Chatbot/>
+          <Footer />
+          <Chatbot />
         </ThemeProvider>
       </body>
     </html>
