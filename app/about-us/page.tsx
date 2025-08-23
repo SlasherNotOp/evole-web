@@ -93,10 +93,16 @@ const page = () => {
           <Patners />
         </SectionWrapper> */}
 
-                {/* <SectionWrapper className="min-h-[80vh]" id="lead-magnet">
-                    <LeadMagnet />
-                </SectionWrapper>
+                <SectionWrapper className="min-h-[80vh]" id="lead-magnet">
+                    <LeadMagnet
+                        heading1="Want to join our creating team?"
+                        heading2="We're hiring"
+                        subText="We’re always looking for designers, marketers, editors, and social media lovers ready to shake things up."
+                        btnText="Explore Careers"
 
+                    />
+                </SectionWrapper>
+                {/*  
                 <SectionWrapper >
                     <Footer />
                 </SectionWrapper> */}
