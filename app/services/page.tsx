@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { workExperience } from "@/data";
 import { useRouter, useSearchParams } from "next/navigation";
+import MagicButton from "@/components/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const ServicesPage = () => {
     const searchParams = useSearchParams();
@@ -36,31 +38,48 @@ const ServicesPage = () => {
                 {workExperience.map((service, index) => (
                     <motion.section
                         key={service.id}
-                        id={service.slug} // ✅ Each section gets a unique ID
+                        id={`${service.id}`} // ✅ Each section gets a unique ID
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                         className="bg-[#0d102d] rounded-2xl border border-gray-700 shadow-lg p-8"
                     >
-                        <div className="flex flex-col md:flex-row gap-8 items-center">
-                            <img
-                                src={service.thumbnail}
-                                alt={service.title}
-                                className="w-32 h-32 object-contain"
-                            />
-                            <div className="flex-1">
+                        <div className="flex flex-col md:flex-row-reverse gap-8 ">
+                            <div className="w-1/4 flex justify-center items-center">
+                                <img
+                                    src={service.thumbnail}
+                                    alt={service.title}
+                                    className="w-full  object-contain"
+                                />
+                            </div>
+
+                            <div className="w-3/4">
                                 <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
-                                <p className="text-gray-300 mb-6">{service.desc}</p>
+                                <p className="text-2xl">overwiew:</p>
+                                <p className="font-poppins text-lg font-normal text-gray-300 mb-6">{service.overview}</p>
                                 {/* Temporary extra details */}
-                                <p className="text-gray-400 mb-4">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Quisque et est quis sapien ultricies aliquam. Sed fermentum
-                                    risus vitae dolor tincidunt, vel dignissim justo dictum.
+                                <p className="text-2xl">What's included:</p>
+                                <ul className="list-disc ml-4 font-poppins text-lg font-normal">
+                                    {
+                                        service.include?.map((li, index) => {
+                                            return (
+                                                <li key={index}>{li}</li>
+                                            )
+                                        })
+                                    }
+
+                                </ul>
+                                <p className="text-2xl">Ideal For:</p>
+                                <p className="text-gray-400">
+                                    local business, influencers, and service providers who want to build a loyal online audience
                                 </p>
-                                <button className="bg-purple px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 transition">
-                                    Get This Service
-                                </button>
+                                <MagicButton
+                                    otherClasses='text-[#5d16ea] bg-white text-[1.3rem]'
+                                    title={"Get Quote"}
+                                    icon={<FaLocationArrow />}
+                                    position="right"
+                                />
                             </div>
                         </div>
                     </motion.section>

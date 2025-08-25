@@ -168,6 +168,8 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
+    overview:"We handle everything from content calendars to strategy and execution, ensuring your brand voice stays consistent and impactful across Instagram, Facebook, and more.",
+    include:["custom Posts/ad creatives",'custom Posts/ad creatives','custom Posts/ad creatives',"custom Posts/ad creatives","custom Posts/ad creatives"],
     title: "Social Media Marketing",
     desc: "Build visibilitiy and commuunity across plathforms with tailored content & strategy.",
     className: "md:col-span-2",
