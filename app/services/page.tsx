@@ -59,10 +59,10 @@ const ServicesPage = () => {
                                 <p className="text-2xl">overwiew:</p>
                                 <p className="font-poppins text-lg font-normal text-gray-300 mb-6">{service.overview}</p>
                                 {/* Temporary extra details */}
-                                <p className="text-2xl">What`&apos;`s included:</p>
+                                <p className="text-2xl">What&apos;s included:</p>
                                 <ul className="list-disc ml-4 font-poppins text-lg font-normal">
                                     {
-                                        service.include?.map((li, index) => {
+                                        service.include?.map((li: string, index) => {
                                             return (
                                                 <li key={index}>{li}</li>
                                             )
@@ -72,11 +72,11 @@ const ServicesPage = () => {
                                 </ul>
                                 <p className="text-2xl">Ideal For:</p>
                                 <p className="text-gray-400">
-                                    local business, influencers, and service providers who want to build a loyal online audience
+                                    {service.ideaFor}
                                 </p>
                                 <MagicButton
                                     otherClasses='text-[#5d16ea] bg-white text-[1.3rem]'
-                                    title={"Get Quote"}
+                                    title={service.btnText ?? ""}
                                     icon={<FaLocationArrow />}
                                     position="right"
                                 />

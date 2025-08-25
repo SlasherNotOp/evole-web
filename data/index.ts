@@ -169,7 +169,20 @@ export const workExperience = [
   {
     id: 1,
     overview:"We handle everything from content calendars to strategy and execution, ensuring your brand voice stays consistent and impactful across Instagram, Facebook, and more.",
-    include:["custom Posts/ad creatives",'custom Posts/ad creatives','custom Posts/ad creatives',"custom Posts/ad creatives","custom Posts/ad creatives"],
+    ideaFor:"local business, influencers, and service providers who want to build a loyal online audience",
+    include:
+    [
+      "Custom Posts/month",
+      "Profile Optimization",
+      "Story Strategy & Highlights",
+      "Hashtag & Caption Optimization",
+      "Monthly Content Calendar",
+      "Meta Ads awareness campaigns",
+      "Account Management & Analytics Reporting",
+      
+
+    ],
+    btnText:'Book Free Strategy',
     title: "Social Media Marketing",
     desc: "Build visibilitiy and commuunity across plathforms with tailored content & strategy.",
     className: "md:col-span-2",
@@ -177,6 +190,18 @@ export const workExperience = [
   },
   {
     id: 2,
+    overview:"Short-form content is king. Our creative team scripts, shoots, and edits reels and commercial ads that stop the scroll and spark action.",
+    ideaFor:"Restaurants, salons, clothing brands, and personal brands looking to go viral or convert.",
+    include:
+    [
+      "Cinematic Reels for Instagram/Facebook",
+      "Product Showcases",
+      "Client Testimonials",
+      "Ad-Ready Video Shoots",
+      "Editing with transitions, SFX & voiceovers",
+      "Commercial Ad Scripts ",
+    ],
+    btnText:' Book a Shoot',
     title: "Content Creation(Reels + Ad Shoot)",
     desc: "Scroll-stopping videos and professional shoots that capture attention and drive action.",
     className: "md:col-span-2", 
@@ -184,6 +209,18 @@ export const workExperience = [
   },
   {
     id: 3,
+    overview:"We design clean, fast, mobile-friendly websites that look premium and drive conversions. From single-scroll to full-fledged e-commerce — we’ve got you covered.",
+    ideaFor:"Businesses looking to establish credibility or scale operations online.",
+    include:
+    [
+      "UI/UX Design aligned with your brand",
+      "Static, Dynamic, or E-commerce Websites",
+      "Mobile Optimization",
+      "Hosting & Domain Setup",
+      "Basic SEO Integration",
+      "WhatsApp Chat + Payment Gateway",
+    ],
+    btnText:' Launch Your Website',
     title: "Website Design & Development",
     desc: "SEO-ready, mobile-responsive websites built to convert and represent your brand.",
     className: "md:col-span-2", 
@@ -191,18 +228,52 @@ export const workExperience = [
   },
   {
     id: 4,
+    overview:" We help you rank on Google — locally and nationally. From keyword research to backlinks, we build your visibility the right way.",
+    ideaFor:"Local clinics, cafes, service providers, and B2B businesses targeting long-term traffic growth.",
+    include:
+    [
+      "Technical SEO Audit",
+      "On-page Optimization",
+      "Local SEO & Google My Business",
+      "Keyword Research & Competitor Analysis",
+      "SEO-optimized Content Suggestions",
+      "Monthly Reports",
+    ],
+    btnText:'Boost My Ranking',
     title: "Search Engine Optimization (SEO)",
     desc: "Rank higher on Google and attract organic traffic that actually converts.",
     thumbnail: "/exp3.svg",
   },
   {
     id: 5,
+    overview:"We run high-ROI ad campaigns focused on reach, traffic, and conversions. Whether it’s leads or brand awareness — our numbers speak.",
+    ideaFor:"Product launches, lead generation, or boosting events, offers, and new stores.",
+    include:
+    [
+      "Meta & Google Ads Setup",
+      "Campaign Strategy & Audience Targeting",
+      "Daily Budget Management",
+      "Analytics & Performance Reporting",
+    ],
+    btnText:'Run My Ads',
     title: "Performance Marketing",
     desc: "Maximize your ROI through data-driven Meta & Google Ads campaigns.",
     thumbnail: "/exp3.svg",
   },
   {
     id: 6,
+    overview:" From logos to packaging and brand identity systems — we help you look the part before you even speak.",
+    ideaFor:"New businesses, rebranding projects, personal brands, or franchises.",
+    include:
+    [
+      "Brand Identity Kit (Logo, Fonts, Color Palette)",
+      "Business Cards & Flyers",
+      "Instagram Highlight Icons",
+      "Brand Mockups",
+      "Product Label Design",
+      "Corporate Profile/Company Decks",
+    ],
+    btnText:'Create My Brand Identity',
     title: "Branding & Graphic Design",
     desc: "Create a bold brand identity with visuals that speak your message loud and clear.",
     thumbnail: "/exp3.svg",

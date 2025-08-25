@@ -8,8 +8,7 @@ import MagicButton from "@/components/MagicButton";
 const ContactPage = () => {
     return (
         <div className="w-full h-full flex items-center flex-col">
-            {/* <h1 className="mt-24 text-[40px] text-center min-h-[6rem]">Contact Us</h1> */}
-            <div className="flex my-32 flex-col lg:flex-row justify-between gap-12 bg-black-200  p-10 rounded-2xl border border-black-300 w-[80%] ">
+            <div className="flex my-32 flex-col lg:flex-row justify-between gap-12 bg-black-200 p-10 rounded-2xl border border-black-300 w-[80%]">
                 {/* LEFT SIDE - INFO */}
                 <motion.div
                     className="flex-1 text-white"
@@ -18,12 +17,10 @@ const ContactPage = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-4xl font-bold mb-4">
-                        Get in Touch with <span className="text-purple">Vdigtech</span> 👋
+                        Let’s Work Together!
                     </h2>
                     <p className="text-gray-300 mb-6 max-w-md">
-                        Feel free to connect with us for any of your needs regarding our
-                        services. Our support team is ready to solve any of your issues. Just
-                        send us a message, and we’ll get back to you immediately.
+                        We’re just a message away from transforming your digital presence. Whether you’re a local business or a growing brand — we’re ready to help you scale.
                     </p>
 
                     <h3 className="text-lg font-semibold mb-2">India</h3>
@@ -32,15 +29,15 @@ const ContactPage = () => {
                     <ul className="space-y-4 text-gray-300">
                         <li className="flex items-center gap-3">
                             <FaMapMarkerAlt className="text-purple" />
-                            Bhubaneswar, Odisha 751024
+                            Dhule Maharastra 424001
                         </li>
                         <li className="flex items-center gap-3">
                             <FaEnvelope className="text-purple" />
-                            info@vdigtech.com
+                            evolvemedia@gmail.com
                         </li>
                         <li className="flex items-center gap-3">
                             <FaPhoneAlt className="text-purple" />
-                            +91 7008166042
+                            +91 9130754116
                         </li>
                     </ul>
                 </motion.div>
@@ -106,6 +103,25 @@ const ContactPage = () => {
                             required
                             whileFocus={{ scale: 1.02 }}
                         />
+
+                        {/* Service Type Dropdown */}
+                        <motion.select
+                            className="w-full p-3 rounded-lg bg-black-100 border border-black-300 text-white focus:outline-none focus:ring-2 focus:ring-purple"
+                            required
+                            whileFocus={{ scale: 1.02 }}
+                        >
+                            <option value="" disabled selected>
+                                Select Service Type
+                            </option>
+                            <option value="social-media">Social Media Marketing</option>
+                            <option value="content-creation">Content Creation (Reels & Ads)</option>
+                            <option value="website-design">Website Design & Development</option>
+                            <option value="seo">SEO</option>
+                            <option value="performance-marketing">Performance Marketing</option>
+                            <option value="branding">Branding & Graphic Design</option>
+                            <option value="others">Others</option>
+                        </motion.select>
+
                         {/* Button */}
                         <motion.div
                             className="w-full mt-2"
@@ -114,7 +130,7 @@ const ContactPage = () => {
                             transition={{ delay: 0.6, duration: 0.5 }}
                         >
                             <MagicButton
-                                title="Connect With Vdigtech Today"
+                                title="Book Free Consultation"
                                 icon={<FaLocationArrow />}
                                 position="right"
                             />
