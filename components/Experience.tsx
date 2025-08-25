@@ -4,6 +4,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import Link from "next/link";
 
 const Experience = () => {
   return (
@@ -32,7 +33,7 @@ const Experience = () => {
               // remove bg-white dark:bg-slate-900
               className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
             >
-              <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 gap-2">
+              <Link href={`/services#${card.id}`} className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 gap-2">
                 <img
                   src={card.thumbnail}
                   alt={card.thumbnail}
@@ -47,16 +48,19 @@ const Experience = () => {
                   </p>
                 </div>
 
-              </div>
+              </Link>
             </Button>
           ))}
         </div>
         <div className="text-center">
-          <MagicButton
-            title="Explore All Services"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
+          <Link href={"/services"}>
+            <MagicButton
+              title="Explore All Services"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </Link>
+
         </div>
       </div>
     </div>

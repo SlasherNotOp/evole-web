@@ -8,7 +8,7 @@ import MagicButton from "@/components/MagicButton";
 const ContactPage = () => {
     return (
         <div className="w-full h-full flex items-center flex-col">
-            <div className="flex my-32 flex-col lg:flex-row justify-between gap-12 bg-black-200 p-10 rounded-2xl border border-black-300 w-[80%]">
+            <div className="flex my-32 flex-col lg:flex-row justify-between gap-12 bg-black-200 p-6 sm:p-10 rounded-2xl border border-black-300  w-[90%] sm:w-[80%]">
                 {/* LEFT SIDE - INFO */}
                 <motion.div
                     className="flex-1 text-white"

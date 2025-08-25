@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black text-white pt-20 pb-10 relative font-poppins" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96 -z-10">
+      {/* <div className="w-full absolute left-0 -bottom-72 min-h-96 -z-10">
         <img
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-full opacity-10"
         />
-      </div>
+      </div> */}
 
       {/* Main Section */}
       <div className="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-12">

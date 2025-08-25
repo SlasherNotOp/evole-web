@@ -1,6 +1,7 @@
 import React from 'react'
 import MagicButton from './MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
+import Link from 'next/link'
 
 export const LeadMagnet = ({
   heading1 = "Let’s Grow Your Business",
@@ -28,14 +29,14 @@ export const LeadMagnet = ({
       <p className="text-white-200 md:mt-10 my-5 text-center font-poppins">
         {subText}
       </p>
-      <a href="mailto:patilharshal2122@gmail.com">
+      <Link href="/contact-us">
         <MagicButton
           otherClasses='text-[#5d16ea] bg-white text-[1.3rem]'
           title={btnText}
           icon={<FaLocationArrow />}
           position="right"
         />
-      </a>
+      </Link>
     </div>
   )
 }
