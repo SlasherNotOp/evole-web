@@ -8,18 +8,18 @@ import MagicButton from "@/components/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 
 const ServicesPage = () => {
-    const searchParams = useSearchParams();
+    // const searchParams = useSearchParams();
 
     // Scroll to the service ID when hash changes
-    useEffect(() => {
-        const hash = window.location.hash;
-        if (hash) {
-            const element = document.querySelector(hash);
-            if (element) {
-                element.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        }
-    }, [searchParams]);
+    // useEffect(() => {
+    //     const hash = window.location.hash;
+    //     if (hash) {
+    //         const element = document.querySelector(hash);
+    //         if (element) {
+    //             element.scrollIntoView({ behavior: "smooth", block: "start" });
+    //         }
+    //     }
+    // }, [searchParams]);
 
     return (
         <div className="py-20 px-6 md:px-16 lg:px-28 bg-gradient-to-b from-[#04071d] to-[#0c0e23] text-white">
