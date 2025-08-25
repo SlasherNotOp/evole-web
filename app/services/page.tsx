@@ -59,7 +59,7 @@ const ServicesPage = () => {
                                 <p className="text-2xl">overwiew:</p>
                                 <p className="font-poppins text-lg font-normal text-gray-300 mb-6">{service.overview}</p>
                                 {/* Temporary extra details */}
-                                <p className="text-2xl">What's included:</p>
+                                <p className="text-2xl">What`&apos;`s included:</p>
                                 <ul className="list-disc ml-4 font-poppins text-lg font-normal">
                                     {
                                         service.include?.map((li, index) => {

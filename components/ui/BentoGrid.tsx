@@ -140,9 +140,9 @@ export const BentoGridItem = ({
             <p className="text-2xl">{shortDiscription}</p>
             <ul className="flex flex-col gap-4">
               {
-                contentList?.map((list: string) => {
+                contentList?.map((list: string, index) => {
                   return (
-                    <div className="flex gap-4">
+                    <div key={index} className="flex gap-4">
                       <span>→</span>
                       <li className="text-3xl">{list}</li>
                     </div>

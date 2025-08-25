@@ -24,7 +24,7 @@ const Footer = () => {
             title="Let's connect"
             icon={<FaLocationArrow />}
             position="right"
-            btnStyles="bg-transparent border border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+          // btnStyles="bg-transparent border border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
           />
         </div>
 
