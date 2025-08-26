@@ -4,11 +4,39 @@ import { motion } from "framer-motion";
 import { FaLocationArrow } from "react-icons/fa6";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import MagicButton from "@/components/MagicButton";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const ContactPage = () => {
+    // ✅ Formik Setup
+    const formik = useFormik({
+        initialValues: {
+            name: "",
+            email: "",
+            phoneCode: "+91",
+            phone: "",
+            location: "",
+            service: "",
+        },
+        validationSchema: Yup.object({
+            name: Yup.string().required("Name is required"),
+            email: Yup.string().email("Invalid email address").required("Email is required"),
+            phone: Yup.string()
+                .matches(/^[0-9]{10}$/, "Must be 10 digits")
+                .required("Phone number is required"),
+            location: Yup.string().required("Location is required"),
+            service: Yup.string().required("Please select a service"),
+        }),
+        onSubmit: (values) => {
+            console.log("Form Submitted", values);
+            alert("Form submitted successfully!");
+            formik.resetForm();
+        },
+    });
+
     return (
         <div className="w-full h-full flex items-center flex-col">
-            <div className="flex my-32 flex-col lg:flex-row justify-between gap-12 bg-black-200 p-6 sm:p-10 rounded-2xl border border-black-300  w-[90%] sm:w-[80%]">
+            <div className="flex my-32 flex-col lg:flex-row justify-between gap-12 bg-black-200 p-6 sm:p-10 rounded-2xl border border-black-300 w-[90%] sm:w-[80%]">
                 {/* LEFT SIDE - INFO */}
                 <motion.div
                     className="flex-1 text-white"
@@ -54,6 +82,7 @@ const ContactPage = () => {
                     </h3>
 
                     <motion.form
+                        onSubmit={formik.handleSubmit}
                         className="w-full flex flex-col gap-4"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -62,55 +91,84 @@ const ContactPage = () => {
                         {/* Name */}
                         <motion.input
                             type="text"
+                            name="name"
                             placeholder="Your Name"
                             className="w-full p-3 rounded-lg bg-black-100 border border-black-300 text-white focus:outline-none focus:ring-2 focus:ring-purple"
-                            required
+                            value={formik.values.name}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             whileFocus={{ scale: 1.02 }}
                         />
+                        {formik.touched.name && formik.errors.name && (
+                            <p className="text-red-500 text-sm">{formik.errors.name}</p>
+                        )}
 
                         {/* Email */}
                         <motion.input
                             type="email"
+                            name="email"
                             placeholder="Your Email"
                             className="w-full p-3 rounded-lg bg-black-100 border border-black-300 text-white focus:outline-none focus:ring-2 focus:ring-purple"
-                            required
+                            value={formik.values.email}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             whileFocus={{ scale: 1.02 }}
                         />
+                        {formik.touched.email && formik.errors.email && (
+                            <p className="text-red-500 text-sm">{formik.errors.email}</p>
+                        )}
 
                         {/* Phone */}
                         <div className="flex gap-2">
                             <motion.input
                                 type="tel"
+                                name="phoneCode"
                                 placeholder="+91"
                                 className="w-1/3 p-3 rounded-lg bg-black-100 border border-black-300 text-white focus:outline-none focus:ring-2 focus:ring-purple"
-                                required
+                                value={formik.values.phoneCode}
+                                readOnly
                                 whileFocus={{ scale: 1.02 }}
                             />
                             <motion.input
                                 type="tel"
+                                name="phone"
                                 placeholder="Phone Number"
                                 className="w-2/3 p-3 rounded-lg bg-black-100 border border-black-300 text-white focus:outline-none focus:ring-2 focus:ring-purple"
-                                required
+                                value={formik.values.phone}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
                                 whileFocus={{ scale: 1.02 }}
                             />
                         </div>
+                        {formik.touched.phone && formik.errors.phone && (
+                            <p className="text-red-500 text-sm">{formik.errors.phone}</p>
+                        )}
 
                         {/* Location */}
                         <motion.input
                             type="text"
+                            name="location"
                             placeholder="Your Location"
                             className="w-full p-3 rounded-lg bg-black-100 border border-black-300 text-white focus:outline-none focus:ring-2 focus:ring-purple"
-                            required
+                            value={formik.values.location}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             whileFocus={{ scale: 1.02 }}
                         />
+                        {formik.touched.location && formik.errors.location && (
+                            <p className="text-red-500 text-sm">{formik.errors.location}</p>
+                        )}
 
                         {/* Service Type Dropdown */}
                         <motion.select
+                            name="service"
                             className="w-full p-3 rounded-lg bg-black-100 border border-black-300 text-white focus:outline-none focus:ring-2 focus:ring-purple"
-                            required
+                            value={formik.values.service}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             whileFocus={{ scale: 1.02 }}
                         >
-                            <option value="" disabled selected>
+                            <option value="" disabled>
                                 Select Service Type
                             </option>
                             <option value="social-media">Social Media Marketing</option>
@@ -121,6 +179,9 @@ const ContactPage = () => {
                             <option value="branding">Branding & Graphic Design</option>
                             <option value="others">Others</option>
                         </motion.select>
+                        {formik.touched.service && formik.errors.service && (
+                            <p className="text-red-500 text-sm">{formik.errors.service}</p>
+                        )}
 
                         {/* Button */}
                         <motion.div
@@ -133,6 +194,7 @@ const ContactPage = () => {
                                 title="Book Free Consultation"
                                 icon={<FaLocationArrow />}
                                 position="right"
+                                type="submit"
                             />
                         </motion.div>
                     </motion.form>
