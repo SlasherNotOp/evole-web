@@ -6,6 +6,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import MagicButton from "@/components/MagicButton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { submitFormValue } from "@/serverFunction/form";
 
 const ContactPage = () => {
     // ✅ Formik Setup
@@ -27,9 +28,8 @@ const ContactPage = () => {
             location: Yup.string().required("Location is required"),
             service: Yup.string().required("Please select a service"),
         }),
-        onSubmit: (values) => {
-            console.log("Form Submitted", values);
-            alert("Form submitted successfully!");
+        onSubmit: async (values) => {
+            await submitFormValue(values);
             formik.resetForm();
         },
     });
